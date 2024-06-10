@@ -19,7 +19,7 @@ public class DoctorDaoImpl extends AbstractDao<DoctorEntity, Long> implements Do
         String query = "FROM DoctorEntity where specialization = :spec";
 
         return entityManager.createQuery(query, DoctorEntity.class)
-                .setParameter("specialization",specialization)
+                .setParameter("spec",specialization)
                 .getResultList();
     }
 
